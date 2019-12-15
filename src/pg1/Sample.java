@@ -32,6 +32,7 @@ public class Sample {
 		String path = "F:\\j2eeworkspace\\YoutuTest\\src\\pg1\\test.jpg";
 		JSONObject res = client.handwriting(path, new HashMap<String, String>());
 		
+		
 		JSONArray result = (JSONArray) res.get("words_result");
 		for (int i = 0; i < result.length(); i++) {
 			System.out.println(((JSONObject)result.get(i)).get("words"));
